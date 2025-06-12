@@ -11,7 +11,7 @@ config();
 
 const app = express();
 app.use(cors({
-  origin: 'https://event-management-jlhuzjeas-pratham-suroshis-projects.vercel.app/', // your actual Vercel frontend URL
+  origin: 'https://event-management-62knajuuk-pratham-suroshis-projects.vercel.app/',
   credentials: true
 }));
 
