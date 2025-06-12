@@ -10,10 +10,22 @@ import eventRoutes from './routes/eventRoutes.js';
 config();
 
 const app = express();
+const allowedOrigins = [
+  'https://event-management-2n7i8tg8w-pratham-suroshis-projects.vercel.app',
+  'https://event-management-jlhuzjeas-pratham-suroshis-projects.vercel.app'
+];
+
 app.use(cors({
-  origin: 'https://event-management-62knajuuk-pratham-suroshis-projects.vercel.app/',
+  origin: function (origin, callback) {
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  },
   credentials: true
 }));
+
 
 app.use(json());
 
