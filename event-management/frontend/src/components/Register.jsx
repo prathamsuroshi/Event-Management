@@ -13,7 +13,7 @@ const Register = () => {
   const registerHandler = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('http://localhost:10000/api/auth/register', {
+      await axios.post('https://event-management-5-tjjq.onrender.com/api/auth/register', {
         name,
         email,
         password,
