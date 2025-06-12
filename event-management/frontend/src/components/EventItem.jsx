@@ -23,7 +23,7 @@ export default function EventItem({
       <h3 className="text-lg font-bold text-gray-800">{event.title}</h3>
       <p className="text-gray-700">{event.description}</p>
       <p className="text-sm text-gray-500">
-        📅 Date: {new Date(event.date).toLocaleDateString()}
+        📅 Date: {new Date(event.date).toLocaleDateString('en-GB')}
       </p>
       <p className="text-sm text-gray-500">📍 Location: {event.location}</p>
       <p className="text-sm text-gray-600">
