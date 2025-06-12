@@ -10,7 +10,11 @@ import eventRoutes from './routes/eventRoutes.js';
 config();
 
 const app = express();
-app.use(cors());
+app.use(cors({
+  origin: 'https://event-management-jlhuzjeas-pratham-suroshis-projects.vercel.app/', // your actual Vercel frontend URL
+  credentials: true
+}));
+
 app.use(json());
 
 
